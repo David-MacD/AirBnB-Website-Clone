@@ -9,20 +9,806 @@
 </head>
 
 <body>
-  <div id="search">
-    <input id="search-box" type="search" />
-    <button id="search-filter" hx-post="/clicked.html" hx-swap="outerHTML">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4px; overflow: visible;" aria-hidden="true" role="presentation" focusable="false">
-        <path fill="none" d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"></path>
-      </svg>
-    </button>
-  </div>
+  <section id="top-nav">
+    <div id="search">
+      <div id="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+          style="display:block;height:20px;width:20px;fill:currentColor" aria-hidden="true" role="presentation"
+          focusable="false">
+          <path
+            d="M13 0a13 13 0 0 1 10.5 20.67l7.91 7.92-2.82 2.82-7.92-7.91A12.94 12.94 0 0 1 13 26a13 13 0 1 1 0-26zm0 4a9 9 0 1 0 0 18 9 9 0 0 0 0-18z">
+          </path>
+        </svg>
+      </div>
+      <input id="search-box" type="search" placeholder="Anywhere" />
+      <button id="search-filter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+          style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 4px; overflow: visible;"
+          aria-hidden="true" role="presentation" focusable="false">
+          <path fill="none"
+            d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3">
+          </path>
+        </svg>
+      </button>
+    </div>
 
-  <div class="scroller">
-    
-  </div>
+    <div class="scroller">
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller" checked="">
+        <a href="#cat-1">
+          <img class="scroller-category-icon" src="./img/icon/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" width="24"
+            height="24">
+          <span>Amazing views</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-2">
+          <img class="scroller-category-icon" src="./img/icon/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg" width="24"
+            height="24">
+          <span>Beachfront</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-3">
+          <img class="scroller-category-icon" src="./img/icon/78ba8486-6ba6-4a43-a56d-f556189193da.jpg" width="24"
+            height="24">
+          <span>Mansions</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-4">
+          <img class="scroller-category-icon" src="./img/icon/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" width="24"
+            height="24">
+          <span>Cabins</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-5">
+          <img class="scroller-category-icon" src="./img/icon/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" width="24"
+            height="24">
+          <span>OMG!</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-6">
+          <img class="scroller-category-icon" src="./img/icon/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" width="24"
+            height="24">
+          <span>Amazing pools</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-7">
+          <img class="scroller-category-icon" src="./img/icon/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg" width="24"
+            height="24">
+          <span>Treehouses</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-8">
+          <img class="scroller-category-icon" src="./img/icon/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg" width="24"
+            height="24">
+          <span>Luxe</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-9">
+          <img class="scroller-category-icon" src="./img/icon/9a2ca4df-ee90-4063-b15d-0de7e4ce210a.jpg" width="24"
+            height="24">
+          <span>Off-the-grid</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-10">
+          <img class="scroller-category-icon" src="./img/icon/3726d94b-534a-42b8-bca0-a0304d912260.jpg" width="24"
+            height="24">
+          <span>Trending</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-11">
+          <img class="scroller-category-icon" src="./img/icon/8e507f16-4943-4be9-b707-59bd38d56309.jpg" width="24"
+            height="24">
+          <span>Islands</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-12">
+          <img class="scroller-category-icon" src="./img/icon/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg" width="24"
+            height="24">
+          <span>Castles</span>
+        </a>
+      </label>
+      <label class="scroller-category-item">
+        <input class="scroller-category-selection" type="radio" name="categoryScroller">
+        <a href="#cat-13">
+          <img class="scroller-category-icon" src="./img/icon/3271df99-f071-4ecf-9128-eb2d2b1f50f0.jpg" width="24"
+            height="24">
+          <span>Tiny homes</span>
+        </a>
+      </label>
+    </div>
+  </section>
   <section id="premises-lists">
-    
+    <!-- AMAZING VIEWS -->
+    <div id="cat-1" class="premises-list">
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/367a98f3-e630-45de-8511-131316230cae.jpeg"
+          alt="Hertfordshire, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Hertfordshire, UK</div>
+          <div class="light-text">Lake and garden views</div>
+          <div class="light-text">1–6 Feb · Professional Host</div>
+          <div class="price"><span>£8,038</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/3ebb7df7-0952-4ea5-856a-ccb0ed329016.jpg"
+          alt="Little Whelnetham, Bury St Edmunds, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Little Whelnetham, Bury St Edmunds, UK</div>
+          <div class="light-text">Hosted by John & Michael</div>
+          <div class="light-text">10–15 Feb · Individual Host</div>
+          <div class="price"><span>£840</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">5</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/12da8c31-41ca-437c-909e-b5537969c722.jpeg"
+          alt="Little Whelnetham, Bury St Edmunds, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Little Whelnetham, Bury St Edmunds, UK</div>
+          <div class="light-text">Hosted by John & Michael</div>
+          <div class="light-text">10–15 Feb · Individual Host</div>
+          <div class="price"><span>£840</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">5</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/33f35b2c-3e6b-4c15-acd7-0d1ebb0b4f0e.jpeg"
+          alt="Little Whelnetham, Bury St Edmunds, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Little Whelnetham, Bury St Edmunds, UK</div>
+          <div class="light-text">Hosted by John & Michael</div>
+          <div class="light-text">10–15 Feb · Individual Host</div>
+          <div class="price"><span>£840</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BEACHFRONT -->
+    <div id="cat-2" class="premises-list">
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/7f6dd085-f363-427a-b181-ff712b30cb73.jpeg"
+          alt="Cornwall, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Cornwall, UK</div>
+          <div class="light-text">Easy access to the sea</div>
+          <div class="light-text">5–26 Feb · Professional Host</div>
+          <div class="price"><span>£670</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/367a98f3-e630-45de-8511-131316230cae.jpeg"
+          alt="Hertfordshire, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Hertfordshire, UK</div>
+          <div class="light-text">Lake and garden views</div>
+          <div class="light-text">1–6 Feb · Professional Host</div>
+          <div class="price"><span>£8,038</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/8e71ceb0-15ae-47e9-ae96-4dfcd338efaa.jpeg"
+          alt="Hertfordshire, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Hertfordshire, UK</div>
+          <div class="light-text">Lake and garden views</div>
+          <div class="light-text">1–6 Feb · Professional Host</div>
+          <div class="price"><span>£8,038</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/8e71ceb0-15ae-47e9-ae96-4dfcd338efaa.jpeg"
+          alt="Hertfordshire, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Hertfordshire, UK</div>
+          <div class="light-text">Lake and garden views</div>
+          <div class="light-text">1–6 Feb · Professional Host</div>
+          <div class="price"><span>£8,038</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MANSIONS -->
+    <div id="cat-3" class="premises-list">
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/27b808e8-2e3a-410e-8d4d-329441b25c56.jpeg"
+          alt="Cornwall, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Cornwall, UK</div>
+          <div class="light-text">Easy access to the sea</div>
+          <div class="light-text">5–26 Feb · Professional Host</div>
+          <div class="price"><span>£670</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/367a98f3-e630-45de-8511-131316230cae.jpeg"
+          alt="Hertfordshire, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Hertfordshire, UK</div>
+          <div class="light-text">Lake and garden views</div>
+          <div class="light-text">1–6 Feb · Professional Host</div>
+          <div class="price"><span>£8,038</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/8e71ceb0-15ae-47e9-ae96-4dfcd338efaa.jpeg"
+          alt="Hertfordshire, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Hertfordshire, UK</div>
+          <div class="light-text">Lake and garden views</div>
+          <div class="light-text">1–6 Feb · Professional Host</div>
+          <div class="price"><span>£8,038</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/ad720223-f9d9-4d97-8fd8-f27dc0fc780f.jpeg"
+          alt="Hertfordshire, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Hertfordshire, UK</div>
+          <div class="light-text">Lake and garden views</div>
+          <div class="light-text">1–6 Feb · Professional Host</div>
+          <div class="price"><span>£8,038</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CABINS -->
+    <div id="cat-4" class="premises-list">
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/14bf3d7d-01e4-4f45-b038-cace97b89ab3.jpeg"
+          alt="Little Whelnetham, Bury St Edmunds, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Some Cabin, UK</div>
+          <div class="light-text">Hosted by John & Michael</div>
+          <div class="light-text">10–15 Feb · Individual Host</div>
+          <div class="price"><span>£340</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.56</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/14dee71b-29e5-488c-b9cc-cd4e78327f25.jpeg"
+          alt="Cornwall, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Cornwall, UK</div>
+          <div class="light-text">Easy access to the sea</div>
+          <div class="light-text">5–26 Feb · Professional Host</div>
+          <div class="price"><span>£670</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/9d8e5e0f-a1e4-4c93-9ff9-fb4fcc86eb54.jpeg"
+          alt="Hertfordshire, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Hertfordshire, UK</div>
+          <div class="light-text">Lake and garden views</div>
+          <div class="light-text">1–6 Feb · Professional Host</div>
+          <div class="price"><span>£8,038</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/8e71ceb0-15ae-47e9-ae96-4dfcd338efaa.jpeg"
+          alt="Hertfordshire, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Hertfordshire, UK</div>
+          <div class="light-text">Lake and garden views</div>
+          <div class="light-text">1–6 Feb · Professional Host</div>
+          <div class="price"><span>£8,038</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- OMG! -->
+    <div id="cat-5" class="premises-list">
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/33f35b2c-3e6b-4c15-acd7-0d1ebb0b4f0e.jpeg"
+          alt="Little Whelnetham, Bury St Edmunds, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Some Cabin, UK</div>
+          <div class="light-text">Hosted by John & Michael</div>
+          <div class="light-text">10–15 Feb · Individual Host</div>
+          <div class="price"><span>£340</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.56</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/14dee71b-29e5-488c-b9cc-cd4e78327f25.jpeg"
+          alt="Cornwall, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Cornwall, UK</div>
+          <div class="light-text">Easy access to the sea</div>
+          <div class="light-text">5–26 Feb · Professional Host</div>
+          <div class="price"><span>£670</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/9d8e5e0f-a1e4-4c93-9ff9-fb4fcc86eb54.jpeg"
+          alt="Hertfordshire, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Hertfordshire, UK</div>
+          <div class="light-text">Lake and garden views</div>
+          <div class="light-text">1–6 Feb · Professional Host</div>
+          <div class="price"><span>£8,038</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/8e71ceb0-15ae-47e9-ae96-4dfcd338efaa.jpeg"
+          alt="Hertfordshire, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Hertfordshire, UK</div>
+          <div class="light-text">Lake and garden views</div>
+          <div class="light-text">1–6 Feb · Professional Host</div>
+          <div class="price"><span>£8,038</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.93</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="cat-6" class="premises-list">
+      6
+    </div>
+    <div id="cat-7" class="premises-list">
+      7
+    </div>
+    <div id="cat-8" class="premises-list">
+      8
+    </div>
+    <div id="cat-9" class="premises-list">
+      9
+    </div>
+    <!-- TRENDING -->
+    <div id="cat-10" class="premises-list">
+      <div class="premises-item">
+        <img class="premises-item-image" src="./img/premises/1c1eb7a5-f494-4b5c-89ce-85b7b9f26a38.jpeg"
+          alt="Little Whelnetham, Bury St Edmunds, UK">
+        <label class="favourite">
+          <input type="checkbox">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+            focusable="false"
+            style="display: block; height: 24px; width: 24px; stroke-width: 2; overflow: visible;">
+            <path
+              d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z">
+            </path>
+          </svg>
+        </label>
+        <div class="premises-item-details">
+          <div class="location">Dorset, UK</div>
+          <div class="light-text">Cosy and warm</div>
+          <div class="light-text">28 Feb–28 Mar · Individual Host</div>
+          <div class="price"><span>£900</span> total</div>
+          <div class="rating">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              style="height: 12px; width: 12px; fill: currentcolor;" aria-hidden="true"
+              role="presentation" focusable="false">
+              <path fill-rule="evenodd"
+                d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z">
+              </path>
+            </svg>
+            <span class="light-text" style="font-weight:2">4.87</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="cat-11" class="premises-list">
+      11
+    </div>
+    <div id="cat-12" class="premises-list">
+      12
+    </div>
+    <div id="cat-13" class="premises-list">
+      13
+    </div>
   </section>
 
   <section id="inspiration"></section>
