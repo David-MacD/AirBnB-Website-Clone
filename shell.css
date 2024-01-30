@@ -222,18 +222,33 @@ body {
 
 #nav-bottom {
   position: fixed;
-  display: block;
+  display: flex;
+  justify-content: center;
   bottom: 0px;
   left: 0px;
   background-color: #ddd;
   border-top: 1px solid grey;
-  height: 6rem;
   width: 100%;
 
   transform-origin: 0 50%;
   animation: grow-progress auto ease;
   animation-direction: normal;
   animation-timeline: scroll(root);
+}
+
+.nav-bottom-item {
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+  text-align: center;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.nav-bottom-item>svg {
+  margin: auto;
+}
+
+.nav-active {
+  color: rgb(232, 25, 72);
 }
 
 @keyframes grow-progress {
